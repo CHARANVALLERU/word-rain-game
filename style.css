@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background:  url('sunny.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen, .game-container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+.screen {
+  padding: 30px;
+}
+.hidden {
+  display: none;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+#game-area {
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1); /* translucent light background */
+  border: 2px solid #444;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(4px); /* optional: adds glassmorphic effect */
+}
+
+.word {
+  position: absolute;
+  color:darkred;
+  font-size: 18px;
+  animation: fall 5s linear forwards;
+}
+@keyframes fall {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+#word-input {
+  padding: 12px;
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+}
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background:chartreuse;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+button:hover {
+  background: #03c2d2;
+}
+select {
+  padding: 10px;
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

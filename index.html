@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Rain Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="screen" id="start-screen">
+    <h1>☔ Word Rain Game ☔</h1>
+    <p>Type the words before they reach the bottom!</p>
+    <select id="difficulty">
+      <option value="2000">Easy</option>
+      <option value="1500" selected>Medium</option>
+      <option value="800">Hard</option>
+    </select>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div class="game-container hidden" id="game-container">
+    <div class="stats">
+      <span>Score: <span id="score">0</span></span>
+      <span>Lives: <span id="lives">3</span></span>
+      <span>High Score: <span id="high-score">0</span></span>
+    </div>
+    <div id="game-area"></div>
+    <input type="text" id="word-input" placeholder="Type word and press Enter" autofocus>
+  </div>
+
+  <div class="screen hidden" id="game-over-screen">
+    <h1>💥 Game Over 💥</h1>
+    <p>Your Score: <span id="final-score">0</span></p>
+    <p>High Score: <span id="final-high-score">0</span></p>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
