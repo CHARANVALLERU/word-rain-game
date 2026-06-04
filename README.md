@@ -39,9 +39,6 @@ Score tracking
 Game over logic
 Speed increases over time
 
-📸 Preview
-<img width="1910" height="1026" alt="image" src="https://github.com/user-attachments/assets/cf52158e-a278-4c1d-bfed-df2c51896604" />
-
 
 🌐 Deployment
 Deployed using Netlify:
